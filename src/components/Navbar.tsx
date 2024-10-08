@@ -22,7 +22,7 @@ function Navbar() {
           }
         </div>
 
-        <div className="flex justify-center items-center border w-2/5 bg-white rounded-lg">
+        <div className="flex justify-center items-center border w-2/5 cursor-pointer bg-white rounded-lg">
           <span className="font-inter font-medium text-black">Book Free Consultation Call</span>
         </div>
       </div>      
