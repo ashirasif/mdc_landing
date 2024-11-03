@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      colors:{
+        secondary: '#15151599',
+        borderColor: '#2E2C2C',
+        
+      },
       fontFamily:{
         inter: 'inter'
       },
