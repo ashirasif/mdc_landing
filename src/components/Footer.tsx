@@ -38,6 +38,10 @@ function Footer() {
       </div>
           </div>
         </div>
+      
+
+      <div className="border border-accent w-full"></div>
+      <p className="text-center">© Copyright 2024, All Rights Reserved by Metallon Delta Corporation (MDC)</p>
       </div>      
     </div>
   )
