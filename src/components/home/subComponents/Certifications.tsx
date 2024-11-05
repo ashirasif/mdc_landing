@@ -42,7 +42,7 @@ const certifications =[
 function Certifications() {
   return (
     <div className="flex flex-col gap-4 bg-secondary border border-accent rounded-3xl">
-      <div className="p-8 flex flex-col gap-4">
+      <div className="p-8 flex flex-col gap-4 text-center sm:text-start">
         <h2 className="text-3xl font-medium">Certifications & Registrations</h2>
         <p className="text-foreground">We at MDC believe in staying ahead of the curve and learning new things all the time. MDC has been certified under INTERCERTINC, Business Management Solutions, Ministry of Defense, Government of Pakistan and Pakistan Aeronautical Complex Board (PACB).</p>
       </div>  
