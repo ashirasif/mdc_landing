@@ -20,7 +20,7 @@ function Testimonial() {
     config: config.gentle,
   }));
 
-  const [number, setNumber] = useState<number>(0);
+  const [number, setNumber] = useState<number>(1);
 
   const testimonials: Record<string, TestimonialData> = {
     Randy: {
@@ -105,13 +105,13 @@ function Testimonial() {
         <div className="self-start pt-16">
           <div {...bind()} className="drag text-white">
             <a.div
-              className="relative flex translate-x-[10vw] flex-row justify-start gap-4 lg:translate-x-[25vw]"
+              className="relative flex flex-row justify-start gap-4 lg:translate-x-[25vw]"
               style={spring}
             >
               {Object.keys(testimonials).map((e, i) => (
                 <div
                   key={i}
-                  className="flex w-[80vw] flex-col justify-center gap-20 rounded-2xl bg-secondary p-8 italic lg:w-[45vw]"
+                  className="flex w-[90vw] flex-col justify-center gap-20 rounded-2xl bg-secondary p-8 italic lg:w-[45vw]"
                   onClick={() => {
                     setNumber(i);
                   }}
@@ -120,7 +120,7 @@ function Testimonial() {
                     &quot;{testimonials[e as keyof typeof testimonials].text}&quot;
                   </div>
                   <div className="flex justify-between">
-                  <div className="flex flex-row">
+                  <div className="flex flex-row gap-2">
                     <img
                       width={100}
                       height={100}
@@ -128,7 +128,7 @@ function Testimonial() {
                       src={testimonials[e as keyof typeof testimonials].image}
                       className="w-12 rounded-full"
                     />
-                    <div className="ml-2">
+                    <div className="">
                       <div className="font-normal">
                         {testimonials[e as keyof typeof testimonials].name}
                       </div>

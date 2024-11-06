@@ -9,8 +9,8 @@ function Footer() {
     { name: "LinkedIn", icon: LinkedIn, url: "https://linkedin.com" },
   ]
   return (
-    <div className="bg-[#0F0F0F] p-8 font-inter mt-8">
-      <div className="flex flex-col gap-11 py-12">
+    <div className="bg-[#0F0F0F] p-8 font-inter w-full mt-8">
+      <div className="flex flex-col gap-11 py-12 ">
         <div className="flex flex-col sm:flex-row gap-8">
           <div className="flex flex-col gap-8 sm:w-2/5">
             <img src="/Logo.png" className="w-24" />

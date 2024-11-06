@@ -2,8 +2,8 @@
 function SisterConcernCompanies() {
   return (
     <div className="flex flex-col gap-8">
-      <h2 className="text-3xl text-center font-medium">Sister Concern Companies</h2>
-      <div className="shadow-heroBtn absolute left-[44%] mt-7 z-10 bg-white/20 h-1  -translate-x-1/2 w-64 "></div>
+      <h2 className="text-2xl sm:text-3xl text-center font-medium">Sister Concern Companies</h2>
+      <div className="shadow-blurry absolute left-[48%] mt-7 z-10 bg-white/25 h-1  -translate-x-1/2 w-80 "></div>
 
       <div className="flex flex-col sm:flex-row gap-6">
         <div className="bg-secondary rounded-3xl p-8 sm:w-1/2">
