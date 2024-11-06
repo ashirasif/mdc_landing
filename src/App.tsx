@@ -4,9 +4,11 @@ import Home from "./components/home/Home"
 function App() {
 
   return (
-    <div className="bg-[#0a0a0a]">
+    <div className="bg-[url('/Background.png')] bg-cover bg-center bg-no-repeat">
+      <div className="bg-black/60">
     <Home/>
     <Footer/>
+      </div>
     </div>
   )
 }

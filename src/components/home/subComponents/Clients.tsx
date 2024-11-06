@@ -1,6 +1,6 @@
 function Clients() {
   return (
-    <div className="bg-[#15151599]/60 w-full after:border border-[#2E2C2C] p-8 flex flex-col gap-10 rounded-[40px]">
+    <div className="bg-secondary w-full after:border border-accent border p-8 flex flex-col gap-10 rounded-3xl">
       <div className="w-full flex flex-col gap-4 text-center text-white">
         <h2 className="font-inter font-medium text-4xl">
         Our Clients 

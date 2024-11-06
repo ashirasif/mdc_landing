@@ -54,7 +54,8 @@ export default {
   			inter: 'inter'
   		},
   		boxShadow: {
-  			heroBtn: '0px 0px 20px 5px rgba(366, 366, 366, 0.3)'
+  			heroBtn: '0px 0px 20px 5px rgba(366, 366, 366, 0.3)',
+  			blurry: '-5px 0px 20px 5px rgba(366, 366, 366, 0.5)'
   		},
   		animation: {
   			circulate: 'circulate 4s linear infinite'
