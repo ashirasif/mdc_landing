@@ -1,7 +1,7 @@
 import { useSpring, a, config } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
 import { Star } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 interface TestimonialData {
   text: string;
@@ -22,6 +22,10 @@ function Testimonial() {
 
   const [number, setNumber] = useState<number>(1);
 
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  
+
   const testimonials: Record<string, TestimonialData> = {
     Randy: {
       text: 'We align our success with the success of our customers which is why our offering transcends our software',
@@ -30,17 +34,45 @@ function Testimonial() {
       rating: 4,
     },
     waqas: {
-      text: '"We align our success with the success of our customers which is why our offering transcends our software"',
+      text: 'We align our success with the success of our customers which is why our offering transcends our software',
       image: "/dummy.png",
       name: 'Waqas Malik',
       rating: 5,
     },
     doll: {
-      text: '"We align our success with the success of our customers which is why our offering transcends our software"',
+      text: 'We align our success with the success of our customers which is why our offering transcends our software',
       image: "/dummy.png",
       name: 'Doll Simon',
       rating: 3,
     },
+  };
+
+  useEffect(() => {
+    const startAutoCycle = () => {
+      timeoutRef.current = setTimeout(() => {
+        setNumber((prevNumber) => (prevNumber === 2 ? 0 : prevNumber + 1));
+      }, 5000);
+    };
+
+    // Clear any existing timeout before setting a new one
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    startAutoCycle();
+
+    // Clean up on component unmount
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [number]);
+
+  const handleManualChange = (index: number) => {
+    setNumber(index);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
   };
 
   const bind = useDrag(
@@ -86,9 +118,9 @@ function Testimonial() {
   }, [number]);
 
   return (
-    <div className="flex flex-col overflow-hidden gap-11">
+    <div className="flex flex-col overflow-hidden gap-11 text-lg">
       <div className="flex flex-col items-center gap-4 text-center">
-        <div className="flex bg-secondary rounded-full border border-accent py-2 px-3 gap-1 w-[8.688rem]">
+        <div className="flex bg-secondary shadow-inner rounded-full border border-accent py-2 px-3 gap-1 ">
           <img src="message-regular.svg" className="w-3" alt="Message Icon" />
           <span>Testimonials</span>
         </div>
@@ -111,7 +143,7 @@ function Testimonial() {
               {Object.keys(testimonials).map((e, i) => (
                 <div
                   key={i}
-                  className="flex w-[90vw] flex-col justify-center gap-20 rounded-2xl bg-secondary p-8 italic lg:w-[45vw]"
+                  className="flex w-[90vw] flex-col justify-center gap-20 rounded-2xl bg-secondary shadow-inner p-8 italic lg:w-[45vw]"
                   onClick={() => {
                     setNumber(i);
                   }}
@@ -146,7 +178,7 @@ function Testimonial() {
                       </div>
                     </div>
                   </div>
-                  <img src="/quote-right-solid.svg" className="w-8" />
+                  <img src="/Qoutation Marks.svg" className="w-8" />
 
                   </div>
                 </div>

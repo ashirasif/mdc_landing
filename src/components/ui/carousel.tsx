@@ -83,6 +83,7 @@ const Carousel = React.forwardRef<
       api?.scrollNext()
     }, [api])
 
+
     const handleKeyDown = React.useCallback(
       (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key === "ArrowLeft") {
@@ -197,6 +198,7 @@ const CarouselPrevious = React.forwardRef<
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
+  const [leftArrow, setLeftArrow] = React.useState("/arrow-left-circle-fill.svg")
 
   return (
     <Button
@@ -204,7 +206,7 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "sm:flex absolute hidden bg-secondary h-8 w-8 rounded-full",
+        "sm:flex absolute hidden bg-white hover:bg-white h-10 w-10 rounded-full",
         orientation === "horizontal"
           ? "-left-12 top-1/2 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -213,9 +215,12 @@ const CarouselPrevious = React.forwardRef<
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
+      onMouseEnter={()=> setLeftArrow('/arrow-left-circle-line.svg')}
+      onMouseLeave={()=> setLeftArrow("/arrow-left-circle-fill.svg")}
     >
-      <ArrowLeftIcon className="h-4 w-4" />
-      <span className="sr-only">Previous slide</span>
+      <img src={leftArrow} className="w-full" alt="" />
+      {/* <ArrowLeftIcon className="h-4 w-4" />
+      <span className="sr-only">Previous slide</span> */}
     </Button>
   )
 })
@@ -226,6 +231,7 @@ const CarouselNext = React.forwardRef<
   React.ComponentProps<typeof Button>
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel()
+  const [rightArrow, setRightArrow] = React.useState("/arrow-right-circle-fill.svg")
 
   return (
     <Button
@@ -233,7 +239,7 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "sm:flex absolute hidden bg-secondary h-8 w-8 rounded-full",
+        "sm:flex absolute hidden bg-white hover:bg-white h-10 w-10 rounded-full",
         orientation === "horizontal"
           ? "-right-12 top-1/2 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -242,9 +248,13 @@ const CarouselNext = React.forwardRef<
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
+      onMouseEnter={()=> setRightArrow('/arrow-right-circle-line.svg')}
+      onMouseLeave={()=> setRightArrow("/arrow-right-circle-fill.svg")}
     >
-      <ArrowRightIcon className="h-4 w-4" />
-      <span className="sr-only">Next slide</span>
+      <img src={rightArrow} className="w-full" alt="" />
+
+      {/* <ArrowRightIcon className="h-4 w-4" />
+      <span className="sr-only">Next slide</span> */}
     </Button>
   )
 })
