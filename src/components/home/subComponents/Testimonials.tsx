@@ -1,14 +1,3 @@
-import * as React from "react"
-import Autoplay from "embla-carousel-autoplay"
-
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
 import { Star } from "lucide-react";
 
 interface TestimonialData {
@@ -19,10 +8,6 @@ interface TestimonialData {
 }
 
 function Testimonial() {
-
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  )
 
   const testimonials: Record<string, TestimonialData> = {
     Randy: {
