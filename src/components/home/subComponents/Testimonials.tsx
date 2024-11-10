@@ -1,7 +1,15 @@
-import { useSpring, a, config } from "@react-spring/web";
-import { useDrag } from "@use-gesture/react";
+import * as React from "react"
+import Autoplay from "embla-carousel-autoplay"
+
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 import { Star } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
 
 interface TestimonialData {
   text: string;
@@ -11,20 +19,10 @@ interface TestimonialData {
 }
 
 function Testimonial() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  const [spring, api] = useSpring(() => ({
-    from: {
-      left: "0vw",
-    },
-    config: config.gentle,
-  }));
-
-  const [number, setNumber] = useState<number>(1);
-
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
 
   const testimonials: Record<string, TestimonialData> = {
     Randy: {
@@ -47,76 +45,6 @@ function Testimonial() {
     },
   };
 
-  useEffect(() => {
-    const startAutoCycle = () => {
-      timeoutRef.current = setTimeout(() => {
-        setNumber((prevNumber) => (prevNumber === 2 ? 0 : prevNumber + 1));
-      }, 5000);
-    };
-
-    // Clear any existing timeout before setting a new one
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-    startAutoCycle();
-
-    // Clean up on component unmount
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
-  }, [number]);
-
-  const handleManualChange = (index: number) => {
-    setNumber(index);
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-  };
-
-  const bind = useDrag(
-    ({ swipe: [swipeX] }) => {
-      let n;
-      if (swipeX !== 0) {
-        n = swipeX < 0 ? 1 : -1;
-      }
-      if (
-        n &&
-        Object.keys(testimonials).length > number + n &&
-        number + n >= 0
-      ) {
-        setNumber(number + n);
-      }
-    },
-    { swipe: { duration: 500 } }
-  );
-
-  useEffect(() => {
-    // Set up the event listener for resizing
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    // Add the resize event listener
-    window.addEventListener("resize", handleResize);
-
-    // Initial check to set the `isMobile` state on component mount
-    handleResize();
-
-    // Cleanup function to remove the event listener on unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    api.start({
-      to: { left: `${number * -(window.innerWidth > 1024 ? 51 : 85)}vw` },
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [number]);
-
   return (
     <div className="flex flex-col overflow-hidden gap-11 text-lg">
       <div className="flex flex-col items-center gap-4 text-center">
@@ -134,64 +62,77 @@ function Testimonial() {
             with us.
           </p>
         </div>
-        <div className="self-start pt-16">
-          <div {...bind()} className="drag text-white">
-            <a.div
-              className="relative flex flex-row justify-start gap-4 lg:translate-x-[25vw]"
-              style={spring}
-            >
-              {Object.keys(testimonials).map((e, i) => (
-                <div
-                  key={i}
-                  className="flex w-[90vw] flex-col justify-center gap-20 rounded-2xl bg-secondary shadow-inner p-8 italic lg:w-[45vw]"
-                  onClick={() => {
-                    setNumber(i);
-                  }}
-                >
-                  <div className="w-4/5 text-start">
-                    &quot;{testimonials[e as keyof typeof testimonials].text}&quot;
-                  </div>
-                  <div className="flex justify-between">
-                  <div className="flex flex-row gap-2">
-                    <img
-                      width={100}
-                      height={100}
-                      alt=""
-                      src={testimonials[e as keyof typeof testimonials].image}
-                      className="w-12 rounded-full"
-                    />
-                    <div className="">
-                      <div className="font-normal">
-                        {testimonials[e as keyof typeof testimonials].name}
-                      </div>
-                      <div className="flex gap-0.5">
-                        {Array.from({ length: 5 }).map((_, starIndex) => (
-                          <Star
-                            key={starIndex}
-                            className={`w-4 h-4 ${
-                              starIndex < testimonials[e as keyof typeof testimonials].rating
-                                ? "fill-yellow-500 text-yellow-500"
-                                : "fill-secondary text-secondary"
-                            }`}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <img src="/Qoutation Marks.svg" className="w-8" />
+      </div>
+      
+      {
+        // <Carousel
+        //   plugins={[plugin.current]}
+        //   className="w-full max-w-xs mx-auto"
+        //   onMouseEnter={plugin.current.stop}
+        //   onMouseLeave={plugin.current.reset}
+        // >
+        //   <CarouselContent>
+        //     {Array.from({ length: 5 }).map((_, index) => (
+        //       <CarouselItem key={index}>
+        //         <div className="p-1">
+        //           <Card>
+        //             <CardContent className="flex aspect-square items-center justify-center p-6">
+        //               <span className="text-4xl font-semibold">{index + 1}</span>
+        //             </CardContent>
+        //           </Card>
+        //         </div>
+        //       </CarouselItem>
+        //     ))}
+        //   </CarouselContent>
+        //   <CarouselPrevious />
+        //   <CarouselNext />
+        // </Carousel>
+      }
 
-                  </div>
-                </div>
+<div className="gap-4 flex flex-row overflow-x-auto">
+  {Object.keys(testimonials).map((e, i) => (
+    <div
+      key={i}
+      className="flex-shrink-0 w-full lg:w-1/2 flex flex-col justify-center gap-20 rounded-2xl bg-secondary shadow-inner p-8 italic"
+    >
+      <div className="w-4/5 text-start">
+        &quot;{testimonials[e as keyof typeof testimonials].text}&quot;
+      </div>
+      <div className="flex justify-between">
+        <div className="flex flex-row gap-2">
+          <img
+            width={100}
+            height={100}
+            alt=""
+            src={testimonials[e as keyof typeof testimonials].image}
+            className="w-12 rounded-full"
+          />
+          <div>
+            <div className="font-normal">
+              {testimonials[e as keyof typeof testimonials].name}
+            </div>
+            <div className="flex gap-0.5">
+              {Array.from({ length: 5 }).map((_, starIndex) => (
+                <Star
+                  key={starIndex}
+                  className={`w-4 h-4 ${
+                    starIndex <
+                    testimonials[e as keyof typeof testimonials].rating
+                      ? "fill-yellow-500 text-yellow-500"
+                      : "fill-secondary text-secondary"
+                  }`}
+                />
               ))}
-            </a.div>
+            </div>
           </div>
         </div>
+        <img src="/Qoutation Marks.svg" className="w-8" />
       </div>
-      {isMobile ? (
-        <div className="mt-10 self-center font-light tracking-widest text-white/50">
-          &#8592; SWIPE &#8594;
-        </div>
-      ) : null}
+    </div>
+  ))}
+</div>
+
+
     </div>
   );
 }

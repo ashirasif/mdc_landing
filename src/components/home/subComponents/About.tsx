@@ -86,7 +86,6 @@ function About() {
               <h2 className="sm:w-4/5 text-3xl font-medium">
                 Support & Services
               </h2>
-              <div className="shadow-blurry absolute  mt-7 z-10 bg-white/25 h-1 translate-x-1/4 sm:translate-x-0  w-60 "></div>
               <div className="sm:w-1/5  border border-[#F9F6F3] py-4 rounded-lg flex justify-center items-center gap-2">
                 <span>View All Services</span>
                 <img src="/arrow-right-long-solid.svg" className="w-6" alt="" />
