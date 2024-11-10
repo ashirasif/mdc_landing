@@ -8,7 +8,7 @@ import Testimonial from "./subComponents/Testimonials";
 
 function Home() {
   return (
-    <div className="flex justify-center text-white self-stretch font-inter">
+    <div className="flex justify-center text-white self-stretch font-inter text-lg">
       <div className="w-full px-5 sm:px-0 max-w-screen-xl flex flex-col justify-between gap-20">
           <Navbar />
         <div className="flex flex-col gap-20 mt-10">
@@ -20,7 +20,7 @@ function Home() {
         <Testimonial/>
         <Certifications />
 
-        <div className="p-6 flex flex-col sm:flex-row gap-2 bg-secondary rounded-3xl border border-accent">
+        <div className="p-6 flex flex-col sm:flex-row gap-2 bg-secondary shadow-inner rounded-3xl border border-accent">
           <div className="flex flex-col gap-14 py-12 sm:px-16 sm:w-3/5">
             <h2 className="text-5xl sm:text-7xl font-extrabold text-center sm:text-start">
               Reinforce Your Security Framework with MDC’s Cutting-Edge
@@ -40,7 +40,7 @@ function Home() {
             </div>
           </div>
 
-          <img src="/dummy.png" className="sm:w-2/5"/>
+          <img src="/Banner Image.svg" className="sm:w-2/5"/>
         </div>
 
         <SisterConcernCompanies/>

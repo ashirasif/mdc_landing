@@ -22,6 +22,13 @@ function Testimonial() {
 
   const [number, setNumber] = useState<number>(1);
 
+  useEffect(() => {
+    setTimeout(()=>{
+      number===2?setNumber(0):setNumber(number+1)
+    },5000)
+  }, [number])
+  
+
   const testimonials: Record<string, TestimonialData> = {
     Randy: {
       text: 'We align our success with the success of our customers which is why our offering transcends our software',
@@ -30,13 +37,13 @@ function Testimonial() {
       rating: 4,
     },
     waqas: {
-      text: '"We align our success with the success of our customers which is why our offering transcends our software"',
+      text: 'We align our success with the success of our customers which is why our offering transcends our software',
       image: "/dummy.png",
       name: 'Waqas Malik',
       rating: 5,
     },
     doll: {
-      text: '"We align our success with the success of our customers which is why our offering transcends our software"',
+      text: 'We align our success with the success of our customers which is why our offering transcends our software',
       image: "/dummy.png",
       name: 'Doll Simon',
       rating: 3,
@@ -86,9 +93,9 @@ function Testimonial() {
   }, [number]);
 
   return (
-    <div className="flex flex-col overflow-hidden gap-11">
+    <div className="flex flex-col overflow-hidden gap-11 text-lg">
       <div className="flex flex-col items-center gap-4 text-center">
-        <div className="flex bg-secondary rounded-full border border-accent py-2 px-3 gap-1 w-[8.688rem]">
+        <div className="flex bg-secondary shadow-inner rounded-full border border-accent py-2 px-3 gap-1 w-[8.688rem]">
           <img src="message-regular.svg" className="w-3" alt="Message Icon" />
           <span>Testimonials</span>
         </div>
@@ -111,7 +118,7 @@ function Testimonial() {
               {Object.keys(testimonials).map((e, i) => (
                 <div
                   key={i}
-                  className="flex w-[90vw] flex-col justify-center gap-20 rounded-2xl bg-secondary p-8 italic lg:w-[45vw]"
+                  className="flex w-[90vw] flex-col justify-center gap-20 rounded-2xl bg-secondary shadow-inner p-8 italic lg:w-[45vw]"
                   onClick={() => {
                     setNumber(i);
                   }}
@@ -146,7 +153,7 @@ function Testimonial() {
                       </div>
                     </div>
                   </div>
-                  <img src="/quote-right-solid.svg" className="w-8" />
+                  <img src="/Qoutation Marks.svg" className="w-8" />
 
                   </div>
                 </div>

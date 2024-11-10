@@ -1,12 +1,12 @@
 function About() {
   return (
-    <div className="flex flex-col gap-24 text-center sm:text-start">
+    <div className="flex flex-col gap-24 text-center  sm:text-start text-lg">
           <div className="flex flex-col sm:flex-row gap-8">
-            <div className="sm:w-3/5 p-4 sm:p-8 rounded-3xl gap-10 border bg-secondary border-accent">
+            <div className="sm:w-3/5 p-4 sm:p-8 rounded-3xl gap-10 border bg-secondary border-accent shadow-inner">
               <div className="flex flex-col gap-4">
                 <h1 className="text-center text-4xl font-medium">About Us</h1>
                 <div className="text-white">
-                  <img src="/quote-left-solid.svg" className="w-12" alt="" />
+                  <img src="/Qoutation Marks.svg" className="w-12 rotate-180" alt="" />
                 </div>
                 <p className="text-center text-foreground">
                   Metallon Delta Corporation (Pvt) Limited is a blend of dynamic
@@ -17,7 +17,7 @@ function About() {
                   future.
                 </p>
                 <div className="text-white flex justify-end">
-                  <img src="/quote-right-solid.svg" className="w-12" alt="" />
+                  <img src="/Qoutation Marks.svg" className="w-12" alt="" />
                 </div>
               </div>
             </div>
@@ -27,7 +27,7 @@ function About() {
 
           <div className="flex flex-col gap-8">
             <div className="flex flex-col sm:flex-row gap-8">
-              <div className="sm:w-8/12 bg-secondary border rounded-3xl border-accent">
+              <div className="sm:w-8/12 bg-secondary shadow-inner border rounded-3xl border-accent ">
                 <div className="p-4 sm:p-8 flex flex-col gap-4 text-center sm:text-start">
                   <h2 className="text-3xl font-medium">Mission & Vision</h2>
                   <p className="text-foreground">
@@ -40,23 +40,28 @@ function About() {
                 </div>
 
                 <div className="flex gap-8 px-8">
-                  <div className="bg-[url('/dummy.png')] bg-cover bg-center h-40 w-1/3 rounded-lg"></div>
-                  <div className="bg-[url('/dummy.png')] bg-cover bg-center h-40 w-1/2 rounded-lg"></div>
+                  <div className="bg-[url('/dummy.png')] bg-cover bg-center h-48 w-1/3 rounded-lg"></div>
+                  <div className="bg-[url('/dummy.png')] bg-cover bg-center h-48 w-1/2 rounded-lg"></div>
                 </div>
               </div>
 
-              <div className="sm:w-4/12 border rounded-3xl bg-secondary border-accent">
+              <div className="sm:w-4/12 border rounded-3xl bg-secondary shadow-inner border-accent">
+              <div>
                 <div className="p-4 sm:p-8 flex flex-col gap-4">
                   <h2 className="text-3xl font-medium">Values</h2>
                   <p className="text-foreground">
                     Truth, piety and diligence remain a hallmark in setting
                     company’s goal and response
                   </p>
+                  </div>
+                  <div className="flex justify-end py-4">
+                    <img src="/ri_police-badge-line.svg" className="w-40 -rotate-[32.69deg]" alt="Police badge" />
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="w-full bg-secondary rounded-3xl border border-accent">
+            <div className="w-full bg-secondary shadow-inner rounded-3xl border border-accent">
               <div className="p-4 sm:p-8 flex flex-col gap-4">
                 <h2 className="text-3xl font-medium">Why Choose Use?</h2>
                 <p className="text-foreground">
@@ -77,11 +82,11 @@ function About() {
           </div>
 
           <div className="flex flex-col gap-8">
-            <div className="w-full flex flex-col gap-6 sm:flex-row">
-              <h2 className="sm:w-4/5 text-3xl text-center font-medium">
+            <div className="w-full flex flex-col gap-6 sm:flex-row"> {/*left-1/2 sm:left-[13%] -translate-x-1/2*/}
+              <h2 className="sm:w-4/5 text-3xl font-medium">
                 Support & Services
               </h2>
-              <div className="shadow-blurry absolute left-1/2 sm:left-[39%] mt-7 z-10 bg-white/25 h-1  -translate-x-1/2 w-60 "></div>
+              <div className="shadow-blurry absolute  mt-7 z-10 bg-white/25 h-1 translate-x-1/4 sm:translate-x-0  w-60 "></div>
               <div className="sm:w-1/5  border border-[#F9F6F3] py-4 rounded-lg flex justify-center items-center gap-2">
                 <span>View All Services</span>
                 <img src="/arrow-right-long-solid.svg" className="w-6" alt="" />
@@ -90,7 +95,7 @@ function About() {
 
             <div className="flex flex-col sm:flex-row gap-6">
               <div className="flex flex-col gap-6 sm:w-3/5">
-                <div className="rounded-3xl bg-secondary border border-accent p-4 sm:p-8">
+                <div className="rounded-3xl bg-secondary shadow-inner border border-accent p-4 sm:p-8">
                   <div className="flex flex-col gap-6">
                     <h2 className="text-3xl font-medium">
                       Principals and OEMs
@@ -108,7 +113,7 @@ function About() {
                   </div>
                 </div>
 
-                <div className="rounded-3xl bg-secondary border border-accent p-4 sm:p-8">
+                <div className="rounded-3xl bg-secondary shadow-inner border border-accent p-4 sm:p-8">
                   <div className="flex flex-col gap-6">
                     <h2 className="text-3xl font-medium">
                       Research & Development
@@ -129,7 +134,7 @@ function About() {
                 </div>
               </div>
 
-              <div className="rounded-3xl sm:w-2/5 bg-secondary border border-accent p-4 sm:p-8">
+              <div className="rounded-3xl sm:w-2/5 bg-secondary shadow-inner border border-accent p-4 sm:p-8">
                 <div className="flex flex-col gap-6">
                   <h2 className="text-3xl font-medium">Aerospace & Defence</h2>
                   <p className="text-foreground">
@@ -152,7 +157,7 @@ function About() {
               </div>
             </div>
 
-            <div className="rounded-3xl bg-secondary border border-accent p-4 sm:p-8">
+            <div className="rounded-3xl bg-secondary shadow-inner border border-accent p-4 sm:p-8">
               <div className="flex flex-col gap-6">
                 <h2 className="text-3xl font-medium">Cybersecurity Services</h2>
                 <p className="text-foreground">
