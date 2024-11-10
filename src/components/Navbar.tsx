@@ -25,8 +25,8 @@ function Navbar() {
         <div
           key={i}
           className={cn(
-            "flex items-center p-2 gap-2 cursor-pointer border-b border-transparent active:border-b active:rounded-lg active:bg-secondary hover:border-foreground transition-colors duration-500",
-            nav !== "Home" && "border-transparent"
+            "flex items-center p-2 gap-2 cursor-pointer border-b lg:border-foreground border-transparent active:border-b active:rounded-lg active:bg-secondary hover:border-foreground transition-colors duration-500",
+            nav !== "Home" && "lg:border-transparent"
           )}
         >
           {nav}
