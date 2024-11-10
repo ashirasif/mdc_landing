@@ -10,12 +10,12 @@ function Footer() {
     { name: "LinkedIn", icon: LinkedIn, url: "https://linkedin.com" },
   ];
   return (
-    <div className="bg-[#0F0F0F] p-8 font-inter w-full mt-8">
+    <div className="bg-[#0F0F0F] px-28 font-inter w-full mt-24">
       <div className="flex flex-col gap-11 py-12 ">
         <div className="flex flex-col sm:flex-row gap-8">
           <div className="flex flex-col gap-8 sm:w-2/5">
             <img src="/Logo.png" className="w-24" />
-            <div className="flex flex-col gap-24">
+            <div className="flex flex-col gap-6">
               <p>
                 Truth, piety and diligence remain a hallmark in setting
                 company’s goal and response
@@ -41,17 +41,17 @@ function Footer() {
             <h4 className="text-xl font-medium text-white">Company</h4>
             <ul className="flex flex-col gap-6">
               <li>
-                <div className="flex w-24 cursor-pointer p-2 gap-2 hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
+                <div className="flex w-16 cursor-pointer hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
                   Service
                 </div>
               </li>
               <li>
-                <div className="flex  w-24 cursor-pointer p-2 gap-2 hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
+                <div className="flex  w-20 cursor-pointer hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
                   Resources
                 </div>
               </li>
               <li>
-                <div className="flex w-24 cursor-pointer p-2 gap-2 hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
+                <div className="flex w-20 cursor-pointer hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
                   About us
                 </div>
               </li>
@@ -62,17 +62,17 @@ function Footer() {
             <h4 className="text-xl font-medium text-white">Help</h4>
             <ul className="flex flex-col gap-6">
             <li>
-                <div className="flex w-44 cursor-pointer p-2 gap-2 hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
+                <div className="flex w-44 cursor-pointer hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
                 Customer Support
                 </div>
               </li>
             <li>
-                <div className="flex w-44 cursor-pointer p-2 gap-2 hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
+                <div className="flex w-44 cursor-pointer hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
                 Terms & Conditions
                 </div>
               </li>
             <li>
-                <div className="flex w-44 cursor-pointer p-2 gap-2 hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
+                <div className="flex w-44 cursor-pointer hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
                 Privacy Policy
                 </div>
               </li>

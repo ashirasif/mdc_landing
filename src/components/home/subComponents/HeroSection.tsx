@@ -2,7 +2,7 @@ import GetInTouchButton from "./GetInTouchButton"
 
 function HeroSection() {
   return (
-    <div className='w-full flex flex-col mt-32 gap-8 text-center items-center text-white bg-[url("/bg-hero-section.png")] bg-cover p-8 rounded-lg text-lg'>
+    <div className='w-full flex flex-col mt-32 gap-6 text-center items-center text-white bg-[url("/bg-hero-section.png")] bg-cover p-8 rounded-lg text-lg'>
       <div className="animated-border-box-glow relative"></div>
       <div className="animated-border-box after:border border-white py-4 px-4 flex items-center gap-4 relative">
         <div className='flex justify-center items-center'>
@@ -16,7 +16,7 @@ function HeroSection() {
         </div>
       </div>
       <h1 className='text-3xl sm:text-5xl font-bold font-inter leading-tight'>Pioneering Engineering and Technological <br /> Innovations for a Rapidly Evolving World</h1>
-      <p className='font-inter w-11/12'>
+      <p className='font-inter text-foreground w-11/12'>
         Metallon Delta Corporation (MDC) drives engineering and technological innovation, continually seeking <br /> groundbreaking ideas and solutions. Our expert team delivers cutting-edge, cost-effective products and services. We <br /> our customers receive the most viable solutions, both nationally and internationally.
       </p>
       <GetInTouchButton shadow={true}/>

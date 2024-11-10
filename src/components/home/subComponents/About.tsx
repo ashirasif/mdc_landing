@@ -41,7 +41,7 @@ function About() {
 
                 <div className="flex gap-8 px-8">
                   <div className="bg-[url('/dummy.png')] bg-cover bg-center h-48 w-1/3 rounded-lg"></div>
-                  <div className="bg-[url('/dummy.png')] bg-cover bg-center h-48 w-1/2 rounded-lg"></div>
+                  <div className="bg-[url('/dummy.png')] bg-cover bg-center h-48 w-full rounded-lg"></div>
                 </div>
               </div>
 

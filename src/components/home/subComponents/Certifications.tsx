@@ -53,7 +53,7 @@ function Certifications() {
       }}
       className="w-full max-w-4xl mx-auto"
     >
-      <CarouselContent>
+      <CarouselContent >
         {certifications.map((certification, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
             <div className="p-1">
