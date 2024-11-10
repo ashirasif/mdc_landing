@@ -1,7 +1,7 @@
 import { useSpring, a, config } from "@react-spring/web";
 import { useDrag } from "@use-gesture/react";
 import { Star } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 interface TestimonialData {
   text: string;
@@ -22,11 +22,8 @@ function Testimonial() {
 
   const [number, setNumber] = useState<number>(1);
 
-  useEffect(() => {
-    setTimeout(()=>{
-      number===2?setNumber(0):setNumber(number+1)
-    },5000)
-  }, [number])
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
   
 
   const testimonials: Record<string, TestimonialData> = {
@@ -48,6 +45,34 @@ function Testimonial() {
       name: 'Doll Simon',
       rating: 3,
     },
+  };
+
+  useEffect(() => {
+    const startAutoCycle = () => {
+      timeoutRef.current = setTimeout(() => {
+        setNumber((prevNumber) => (prevNumber === 2 ? 0 : prevNumber + 1));
+      }, 5000);
+    };
+
+    // Clear any existing timeout before setting a new one
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    startAutoCycle();
+
+    // Clean up on component unmount
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [number]);
+
+  const handleManualChange = (index: number) => {
+    setNumber(index);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
   };
 
   const bind = useDrag(
@@ -95,7 +120,7 @@ function Testimonial() {
   return (
     <div className="flex flex-col overflow-hidden gap-11 text-lg">
       <div className="flex flex-col items-center gap-4 text-center">
-        <div className="flex bg-secondary shadow-inner rounded-full border border-accent py-2 px-3 gap-1">
+        <div className="flex bg-secondary shadow-inner rounded-full border border-accent py-2 px-3 gap-1 ">
           <img src="message-regular.svg" className="w-3" alt="Message Icon" />
           <span>Testimonials</span>
         </div>

@@ -27,7 +27,7 @@ function Home() {
               Solutions
             </h2>
             <div className="flex flex-col lg:flex-row gap-6">
-              <div className="rounded-lg border px-4 py-3 cursor-pointer bg-white hover:bg-inherit hover:border-foreground text-[#323130] hover:text-foreground duration-200 flex gap-4 justify-center items-center">
+              <div className="rounded-lg border px-4 py-3 cursor-pointer bg-white hover:bg-inherit hover:border-foreground text-[#323130] hover:text-foreground duration-200 flex gap-1 sm:gap-4 justify-center items-center">
                 <span className="font-medium">
                   Request a consulation call
                 </span>

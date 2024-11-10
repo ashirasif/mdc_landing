@@ -10,7 +10,7 @@ function Footer() {
     { name: "LinkedIn", icon: LinkedIn, url: "https://linkedin.com" },
   ];
   return (
-    <div className="bg-[#0F0F0F] px-28 font-inter w-full mt-24">
+    <div className="bg-[#0F0F0F] px-8 sm:px-28 font-inter w-full mt-24">
       <div className="flex flex-col gap-11 py-12 ">
         <div className="flex flex-col sm:flex-row gap-8">
           <div className="flex flex-col gap-8 sm:w-2/5">
