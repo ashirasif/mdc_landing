@@ -30,13 +30,13 @@ function Home() {
               Solutions
             </h2>
             <div className="flex flex-col lg:flex-row gap-6">
-              <div className="rounded-lg border px-4 py-3 cursor-pointer bg-white hover:bg-inherit hover:border-foreground text-[#323130] hover:text-[#F9F6F3] duration-200 flex gap-1 sm:gap-4 justify-center items-center"
+              <div className="rounded-lg border px-4 py-3 cursor-pointer bg-white hover:bg-inherit hover:border-foreground text-[#323130] hover:text-[#F9F6F3] duration-200 flex gap-1 sm:gap-2 justify-center items-center"
               onMouseOver={()=>setStroke('#F9F6F3')}
               onMouseLeave={()=>setStroke('#323130')}>
-                <span className="font-medium">
+                <span className="sm:font-medium">
                   Request a consulation call
                 </span>
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M17 8L21 12M21 12L17 16M21 12H3" stroke={stroke} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
                 </div>
