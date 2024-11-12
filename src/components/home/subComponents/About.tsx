@@ -82,13 +82,15 @@ function About() {
           </div>
 
           <div className="flex flex-col gap-8">
-            <div className="w-full flex flex-col gap-6 sm:flex-row"> {/*left-1/2 sm:left-[13%] -translate-x-1/2*/}
+            <div className="w-full flex flex-col gap-6 sm:flex-row"> 
               <h2 className="sm:w-4/5 text-3xl font-medium">
                 Support & Services
               </h2>
-              <div className="sm:w-1/5  border border-[#F9F6F3] py-4 rounded-lg flex justify-center items-center gap-2">
+              <div className="sm:w-1/5  border border-primary-foreground hover:bg-[#302F2F] text-primary-foreground cursor-pointer py-4 rounded-lg flex justify-center items-center gap-2">
                 <span>View All Services</span>
-                <img src="/arrow-right-long-solid.svg" className="w-6" alt="" />
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 8L21 12M21 12L17 16M21 12H3" stroke='#F9F6F3' strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
               </div>
             </div>
 

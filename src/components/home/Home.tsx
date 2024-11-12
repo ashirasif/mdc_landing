@@ -5,8 +5,11 @@ import Certifications from "./subComponents/Certifications";
 import SisterConcernCompanies from "./subComponents/SisterConcernCompanies";
 import About from "./subComponents/About";
 import Testimonial from "./subComponents/Testimonials";
+import { useState } from "react";
 
 function Home() {
+  const [stroke, setStroke] = useState('#323130')
+
   return (
     <div className="flex justify-center text-white self-stretch font-inter text-lg">
       <div className="w-full px-5 sm:px-0 max-w-screen-xl flex flex-col justify-between gap-20">
@@ -27,14 +30,18 @@ function Home() {
               Solutions
             </h2>
             <div className="flex flex-col lg:flex-row gap-6">
-              <div className="rounded-lg border px-4 py-3 cursor-pointer bg-white hover:bg-inherit hover:border-foreground text-[#323130] hover:text-foreground duration-200 flex gap-1 sm:gap-4 justify-center items-center">
+              <div className="rounded-lg border px-4 py-3 cursor-pointer bg-white hover:bg-inherit hover:border-foreground text-[#323130] hover:text-[#F9F6F3] duration-200 flex gap-1 sm:gap-4 justify-center items-center"
+              onMouseOver={()=>setStroke('#F9F6F3')}
+              onMouseLeave={()=>setStroke('#323130')}>
                 <span className="font-medium">
                   Request a consulation call
                 </span>
-                <img src="/Arrow-Right.svg" />
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 8L21 12M21 12L17 16M21 12H3" stroke={stroke} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
                 </div>
 
-              <div className="flex justify-center items-center py-2 px-4 border rounded-lg cursor-pointer">
+              <div className="flex justify-center items-center py-2 px-4 border border-primary-foreground hover:bg-[#302F2F] text-primary-foreground rounded-lg cursor-pointer">
                 <span>Explore our Services</span>
               </div>
             </div>
