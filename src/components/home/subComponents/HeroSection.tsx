@@ -2,7 +2,7 @@ import GetInTouchButton from "./GetInTouchButton"
 
 function HeroSection() {
   return (
-    <div className='w-full flex flex-col mt-32 gap-6 text-center items-center text-white p-8 rounded-lg text-lg'>
+    <div className='w-full flex flex-col gap-6 text-center items-center text-white p-8 rounded-lg text-lg'>
       <div className="animated-border-box-glow relative"></div>
       <div className="animated-border-box after:border border-white py-4 pl-6 sm:px-4 flex items-center gap-4 relative">
         <div className='flex justify-center items-center'>

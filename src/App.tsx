@@ -1,15 +1,19 @@
-import Footer from "./components/Footer"
+import { Route, Routes } from "react-router-dom"
+import Layout from "./Layout"
 import Home from "./components/home/Home"
+import Services from "./components/services/Services"
+import Careers from "./components/careers/Careers"
 
 function App() {
 
   return (
-    <div className="bg-[url('/bg-overall.png')] bg-cover bg-center overflow-hidden bg-no-repeat">
-      <div className="bg-black/80">
-        <Home/>
-        <Footer/>
-      </div>
-    </div>
+    <Routes>
+    <Route path="/" element={<Layout/>}>
+      <Route path="" element={<Home/>} />
+      <Route path="services" element={<Services/>} />
+      <Route path="careers" element={<Careers/>} />
+    </Route>
+    </Routes>
   )
 }
 
