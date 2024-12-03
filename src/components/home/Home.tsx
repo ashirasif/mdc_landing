@@ -1,4 +1,3 @@
-import Navbar from "../Navbar";
 import Clients from "./subComponents/Clients";
 import HeroSection from "./subComponents/HeroSection";
 import Certifications from "./subComponents/Certifications";
@@ -13,8 +12,7 @@ function Home() {
   return (
     <div className="flex justify-center text-white self-stretch font-inter text-lg">
       <div className="w-full px-5 sm:px-0 max-w-screen-xl flex flex-col justify-between gap-20">
-          <Navbar />
-        <div className="flex flex-col gap-20 sm:mt-10">
+        <div className="flex flex-col gap-20">
           <HeroSection />
           <Clients />
         

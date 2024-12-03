@@ -58,7 +58,9 @@ export default {
   			blurry: '-5px 0px 20px 5px rgba(366, 366, 366, 0.5)'
   		},
   		animation: {
-  			circulate: 'circulate 4s linear infinite'
+  			circulate: 'circulate 4s linear infinite',
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		},
   		keyframes: {
   			circulate: {
@@ -76,6 +78,22 @@ export default {
   				},
   				'100%': {
   					'box-shadow': '0 -2px 2px white, inset 0 -2px 2px white'
+  				}
+  			},
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
   				}
   			}
   		},
