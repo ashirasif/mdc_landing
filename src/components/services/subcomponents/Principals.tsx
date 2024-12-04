@@ -1,3 +1,4 @@
+
 const points = [
   "Business consultancy, local region marketing, on-site presentations",
   "Identifying new potential project for our principal & OEMs",
