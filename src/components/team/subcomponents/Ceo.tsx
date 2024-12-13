@@ -1,7 +1,7 @@
 function Ceo() {
   return (
       <div className="bg-secondary rounded-[32px] border border-borderColor py-6 px-8 flex flex-col sm:flex-row gap-10">
-        <img src="/Shahzor Ali Shah.png" className="rounded-lg grayscale w-1/5" />
+        <img src="/Shahzor Ali Shah.png" className="rounded-lg grayscale sm:w-1/5" />
         <div className="flex flex-col justify-end gap-4">
           <div className="flex">
             <div className="flex flex-col gap-2">
