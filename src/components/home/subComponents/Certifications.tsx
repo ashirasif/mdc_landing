@@ -9,35 +9,35 @@ import {
 
 const certifications =[
   {
-    image: '',
+    image: '/3084.png',
     text: 'Directorate General of Defense Purchase (DGDP)',
     date: '20.09.2012'
   },
   {
-    image: '',
+    image: '3085.png',
     text: 'ISO9001:2015 Certified',
     date: '20.09.2012'
   },
   {
-    image: '',
+    image: '/3086.png',
     text: 'ISO/IEC27001:2022 Certified',
     date: '20.09.2012'
   },
-  {
-    image: '',
-    text: 'ISO/IEC27001:2022 Certified',
-    date: '20.09.2012'
-  },
-  {
-    image: '',
-    text: 'ISO/IEC27001:2022 Certified',
-    date: '20.09.2012'
-  },
-  {
-    image: '',
-    text: 'ISO/IEC27001:2022 Certified',
-    date: '20.09.2012'
-  },
+  // {
+  //   image: '/3087.png',
+  //   text: 'ISO/IEC27001:2022 Certified',
+  //   date: '20.09.2012'
+  // },
+  // {
+  //   image: '/3088.png',
+  //   text: 'ISO/IEC27001:2022 Certified',
+  //   date: '20.09.2012'
+  // },
+  // {
+  //   image: '/3089.png',
+  //   text: 'ISO/IEC27001:2022 Certified',
+  //   date: '20.09.2012'
+  // },
 ]
 function Certifications() {
   return (
@@ -59,7 +59,8 @@ function Certifications() {
             <div className="p-1">
               <Card>
                 <CardContent className="flex flex-col items-center gap-6 p-6 text-white text-center">
-                  <div className="w-28 h-28 rounded-full bg-gray-300"></div>
+                  {/* <div className={`w-28 h-28 rounded-full bg-[url('${certification.image}')] bg-cover`}></div> */}
+                  <img src={certification.image} className="w-28 h-28 rounded-full bg-white" alt="" />
                   <div className="flex flex-col gap-2">
                   <p className="text-sm">{certification.text}</p>
                   <p className="text-xs text-foreground">{certification.date}</p>

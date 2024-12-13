@@ -9,7 +9,6 @@ import {
   DropdownMenuItem,
 } from "@radix-ui/react-dropdown-menu";
 import { NavLink } from "react-router-dom";
-
 function Navbar() {
   const [dropdown, setDropdown] = useState(false);
   const navigate = useNavigate();
@@ -22,7 +21,7 @@ function Navbar() {
     },
     {
       title: "About Us",
-      link: "about-us"
+      link: ""
     },
     {
       title: "Services",
@@ -43,6 +42,33 @@ function Navbar() {
       link: "careers",
     },
   ];
+  const handleScroll = () => {
+    const target = document.getElementById('about-us');
+    if (target) {
+      const offset = 200; // Adjust the offset (e.g., 100px above the div)
+      const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
+  };
+  const handleClick = () => {
+    setDropdown(false); // Close dropdown
+
+    if (location.pathname === '/') {
+      // Already on the home page, scroll with offset
+      handleScroll();
+    } else {
+      // Navigate to home and scroll with offset
+      navigate('/');
+      setTimeout(() => {
+        handleScroll();
+      }, 100); // Allow navigation to complete
+    }
+  };
 
   const handleServiceClick = (value: string) => {
     if (location.pathname === "/services") {
@@ -74,7 +100,7 @@ function Navbar() {
         >
           <div className="flex flex-col gap-8 self-stretch lg:flex-row">
             {navs.map((nav, i) => {
-              if (nav.title !== "Services") {
+              if (nav.title !== "Services" && nav.title !== "About Us") {
                 return (
                   <NavLink
                     to={nav.link || "/"}
@@ -92,7 +118,17 @@ function Navbar() {
                     {nav.title}
                   </NavLink>
                 );
-              } else {
+              }else if(nav.title === "About Us"){
+                return (
+                  <div
+                    key={i}
+                    onClick={handleClick}
+                    className="flex items-center p-2 gap-2 cursor-pointer border-b active:rounded-lg active:bg-secondary hover:border-foreground transition-colors duration-500 border-transparent"
+                  >
+                    {nav.title}
+                  </div>
+                );
+              }else {
                 return (
                   <DropdownMenu key={i}>
                     <DropdownMenuTrigger asChild>

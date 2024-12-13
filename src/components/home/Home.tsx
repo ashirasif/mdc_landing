@@ -1,10 +1,11 @@
 import Clients from "./subComponents/Clients";
 import HeroSection from "./subComponents/HeroSection";
 import Certifications from "./subComponents/Certifications";
-import SisterConcernCompanies from "./subComponents/SisterConcernCompanies";
 import About from "./subComponents/About";
 import Testimonial from "./subComponents/Testimonials";
 import { useState } from "react";
+import Contact from "./subComponents/Contact";
+import { NavLink } from "react-router-dom";
 
 function Home() {
   const [stroke, setStroke] = useState('#323130')
@@ -15,9 +16,11 @@ function Home() {
         <div className="flex flex-col gap-20">
           <HeroSection />
           <Clients />
-        
-
+          <div id="about-us">
         <About/>
+          </div>
+        
+        
         <Testimonial/>
         <Certifications />
 
@@ -39,17 +42,15 @@ function Home() {
             </svg>
                 </div>
 
-              <div className="flex justify-center items-center py-2 px-4 border border-primary-foreground hover:bg-[#302F2F] text-primary-foreground rounded-lg cursor-pointer">
+              <NavLink to="/services" className="flex justify-center items-center py-2 px-4 border border-primary-foreground hover:bg-[#302F2F] text-primary-foreground rounded-lg cursor-pointer">
                 <span>Explore our Services</span>
-              </div>
+              </NavLink>
             </div>
           </div>
-
-          <img src="/Banner Image.svg" className="sm:w-2/5"/>
+          <img src="/3087.jpg" className="sm:w-2/5 rounded-lg"/>
         </div>
-
-        <SisterConcernCompanies/>
         </div>
+        <Contact/>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ function Aerodpsce() {
     <div className="flex flex-col gap-20 text-center sm:text-start font-inter text-lg">
       <div className="w-full h-0.5 bg-gradient-to-r from-white to-black rounded-full mt-10"></div>
       <div className="flex flex-col-reverse gap-6 sm:flex-row">
-        <img src="/radar-system.png" className="sm:w-1/5 rounded-[56px]" alt="" />
+        <img src="/3090.jpg" className="sm:w-1/5 rounded-[56px]" alt="" />
         <div className="flex flex-col gap-2 sm:w-4/5">
           <h2 className="text-3xl">RADAR System Support</h2>
           <p>
@@ -46,13 +46,13 @@ function Aerodpsce() {
             threats and challenges.
           </p>
         </div>
-        <img src="/electronic.png" className="sm:w-1/5 rounded-[56px]" alt="" />
+        <div className="sm:w-1/5 bg-[url('/3091.png')] bg-cover bg-center rounded-[56px] min-h-[40vh]"></div>
       </div>
 
       <div className="w-full h-0.5 bg-gradient-to-r from-white to-black rounded-full"></div>
       <div className="flex flex-col-reverse gap-6 sm:flex-row">
-        <img src="/helicopter.png" className="sm:w-1/5 rounded-[56px]" alt="" />
-        <div className="flex flex-col gap-2 sm:w-4/5">
+        <div className="sm:w-1/5 bg-[url('/3092.jpg')] bg-cover bg-center rounded-[56px] min-h-[40vh]"></div>
+        <div className="flex flex-col gap-2 sm:w-3/4">
           <h2 className="text-3xl">
             Fixed Wing and Helicopter Life Cycle Support Program
           </h2>
@@ -103,12 +103,13 @@ function Aerodpsce() {
             safety and efficiency.
           </p>
         </div>
-        <img src="/plane-engine.png" className="sm:w-1/5 rounded-[56px]" alt="" />
+        <div className="sm:w-1/5 bg-[url('/3093.webp')] bg-cover bg-right rounded-[56px] min-h-[40vh]"></div>
+
       </div>
 
       <div className="w-full h-0.5 bg-gradient-to-r from-white to-black rounded-full"></div>
       <div className="flex flex-col-reverse gap-6 sm:flex-row">
-        <img src="/fuses.png" className="sm:w-1/5 rounded-[56px]" alt="" />
+\        <div className="sm:w-1/5 bg-[url('/3094.jpg')] bg-cover bg-top rounded-[56px] min-h-[40vh]"></div>
         <div className="flex flex-col gap-2 sm:w-4/5">
           <h2 className="text-3xl">Airborne Fuses</h2>
           <p>
@@ -138,12 +139,13 @@ function Aerodpsce() {
           By partnering with multiple OEMs, we deliver cutting-edge technologies that enhance border security operations. Our expert team provides end-to-end support, from system design and installation to maintenance and upgrades, ensuring that your surveillance capabilities remain robust and effective.
           </p>
         </div>
-        <img src="/border-security.png" className="sm:w-1/5 rounded-[56px]" alt="" />
+        <div className="sm:w-1/5 bg-[url('/3095.jpeg')] bg-cover bg-center rounded-[56px] min-h-[40vh]"></div>
+
       </div>
 
       <div className="w-full h-0.5 bg-gradient-to-r from-white to-black rounded-full"></div>
       <div className="flex flex-col-reverse gap-6 sm:flex-row">
-        <img src="/border-security.png" className="sm:w-1/5 rounded-[56px]" alt="" />
+        <div className="sm:w-1/5 bg-[url('/3096.jpg')] bg-cover bg-center rounded-[56px] min-h-[40vh]"></div>
         <div className="flex flex-col gap-2 sm:w-4/5">
           <h2 className="text-3xl">Fire Fighting and Anti-Locust Aerial Solutions</h2>
           <p>
@@ -161,10 +163,9 @@ function Aerodpsce() {
           <p>
           etallon Delta Corporation’s Drones and Counter Drones Solutions offer cutting-edge capabilities for modern defense and security applications. Our drone solutions encompass reconnaissance, surveillance, and tactical operations, while our counter-drone technologies provide robust protection against unauthorized UAVs.
           <br /><br />
-          Partnering with top-tier OEMs globally, we deliver the latest advancements in drone technology. Our services include system deployment, training, and maintenance, ensuring that your drone operations are highly effective and your Defenses against drone threats are impenetrable.
-</p>
+          Partnering with top-tier OEMs globally, we deliver the latest advancements in drone technology. Our services include system deployment, training, and maintenance, ensuring that your drone operations are highly effective and your Defenses against drone threats are impenetrable.</p>
         </div>
-        <img src="/border-security.png" className="sm:w-1/5 rounded-[56px]" alt="" />
+        <div className="sm:w-1/5 bg-[url('/3097.jpg')] bg-cover bg-center rounded-[56px] min-h-[40vh]"></div>
       </div>
     </div>
   );

@@ -33,7 +33,7 @@ function Testimonial() {
   return (
     <div className="flex flex-col overflow-hidden gap-11 text-lg">
       <div className="flex flex-col items-center gap-4 text-center">
-        <div className="flex bg-secondary shadow-inner rounded-full border border-accent py-2 px-3 gap-1 ">
+        <div className="flex bg-[#161616] shadow-inner rounded-full border border-accent py-2 px-3 gap-1 ">
           <img src="message-regular.svg" className="w-3" alt="Message Icon" />
           <span>Testimonials</span>
         </div>
