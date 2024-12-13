@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom"
+
 function About() {
   return (
     <div className="flex flex-col gap-24 text-center  sm:text-start text-lg">
@@ -22,7 +24,8 @@ function About() {
               </div>
             </div>
 
-            <div className="bg-[url('/dummy.png')] sm:w-2/5 min-h-[40vh] sm:h-full bg-cover bg-center rounded-xl"></div>
+            {/* <div className="bg-[url('/0381.JPG')] sm:w-2/5 min-h-[40vh] sm:h-full bg-cover bg-center rounded-xl"></div> */}
+            <img src="/0381.JPG" className="sm:w-2/5 rounded-lg" alt="" />
           </div>
 
           <div className="flex flex-col gap-8">
@@ -38,11 +41,6 @@ function About() {
                     critical time management.
                   </p>
                 </div>
-
-                <div className="flex gap-8 px-8">
-                  <div className="bg-[url('/dummy.png')] bg-cover bg-center h-48 w-1/3 rounded-lg"></div>
-                  <div className="bg-[url('/dummy.png')] bg-cover bg-center h-48 w-full rounded-lg"></div>
-                </div>
               </div>
 
               <div className="sm:w-4/12 border rounded-3xl bg-secondary shadow-inner border-accent">
@@ -53,9 +51,6 @@ function About() {
                     Truth, piety and diligence remain a hallmark in setting
                     company’s goal and response
                   </p>
-                  </div>
-                  <div className="flex justify-end py-4">
-                    <img src="/ri_police-badge-line.svg" className="w-40 -rotate-[32.69deg]" alt="Police badge" />
                   </div>
                 </div>
               </div>
@@ -75,8 +70,10 @@ function About() {
                 </p>
               </div>
               <div className="flex px-8 gap-8">
-                <div className="bg-[url('/dummy.png')] bg-cover bg-center h-40 w-1/3 rounded-lg"></div>
-                <div className="bg-[url('/dummy.png')] bg-cover bg-center h-40 w-3/5 rounded-lg"></div>
+                <div className="bg-[url('/0382.jpg')] bg-cover bg-center h-80 w-1/2 rounded-lg"></div>
+                {/* <img src="/0382.jpg" className="w-1/2 rounded-lg" alt="" /> */}
+                <div className="bg-[url('/0383.jpg')] bg-cover bg-center h-80 w-1/2 rounded-lg"></div>
+                {/* <img src="/0383.jpg" className="w-1/2 rounded-lg" alt="" /> */}
               </div>
             </div>
           </div>
@@ -86,15 +83,15 @@ function About() {
               <h2 className="sm:w-4/5 text-3xl font-medium">
                 Support & Services
               </h2>
-              <div className="sm:w-1/5  border border-primary-foreground hover:bg-[#302F2F] text-primary-foreground cursor-pointer py-4 rounded-lg flex justify-center items-center gap-2 transition-colors duration-200">
+              <NavLink to='/services' className="sm:w-1/5  border border-primary-foreground hover:bg-[#302F2F] text-primary-foreground cursor-pointer py-4 rounded-lg flex justify-center items-center gap-2 transition-colors duration-200">
                 <span>View All Services</span>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M17 8L21 12M21 12L17 16M21 12H3" stroke='#F9F6F3' strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-              </div>
+              </NavLink>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex flex-col sm:flex-row-reverse gap-6">
               <div className="flex flex-col gap-6 sm:w-3/5">
                 <div className="rounded-3xl bg-secondary shadow-inner border border-accent p-4 sm:p-8">
                   <div className="flex flex-col gap-6">
