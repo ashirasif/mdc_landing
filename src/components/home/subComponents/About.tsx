@@ -104,9 +104,9 @@ function About() {
                       hacking to real-time threat detection and risk management,
                       ensuring robust protection for businesses. Together, they
                       help organizations secure their digital operations.{" "}
-                      <a className="text-white underline italic cursor-pointer">
+                      <NavLink to='/services' className="text-white underline italic cursor-pointer">
                         View more details
-                      </a>
+                      </NavLink>
                     </p>
                   </div>
                 </div>
@@ -124,9 +124,9 @@ function About() {
                       aims to introduce a wide range of new innovative products
                       that will cater to the evolving needs of industries across
                       Pakistan.{" "}
-                      <a className="text-white underline italic cursor-pointer">
+                      <NavLink to='/services?section=item-4' className="text-white underline italic cursor-pointer">
                         View more details
-                      </a>
+                      </NavLink>
                     </p>
                   </div>
                 </div>
@@ -146,10 +146,10 @@ function About() {
                     global OEMs, we ensure all solutions—from installation and
                     integration to maintenance and rapid response—meet the
                     highest standards, enhancing mission-readiness, security,
-                    and operational efficiency. View more details{" "}
-                    <a className="text-white underline italic cursor-pointer">
+                    and operational efficiency. {" "}
+                    <NavLink to='/services?section=item-2' className="text-white underline italic cursor-pointer">
                       View more details
-                    </a>
+                    </NavLink>
                   </p>
                 </div>
               </div>
@@ -171,9 +171,9 @@ function About() {
                   strengthens cybersecurity for organizations across Pakistan
                   and beyond, ensuring secure operations in today’s digital
                   landscape.{" "}
-                  <a className="text-white underline italic cursor-pointer">
+                  <NavLink to='/services?section=item-3' className="text-white underline italic cursor-pointer">
                     View more details
-                  </a>
+                  </NavLink>
                 </p>
               </div>
             </div>

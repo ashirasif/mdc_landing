@@ -39,8 +39,9 @@ function Services() {
   return (
     <div className="max-w-screen-xl w-full mx-auto flex flex-col gap-6 px-4 sm:px-0 font-inter">
       <h2 className="text-4xl text-center text-white font-medium">
-        Support & Services{" "}
+        Support & Services to Principals and OEMs
       </h2>
+      <Principals/>
       <Accordion 
         type="single" 
         collapsible 
@@ -48,12 +49,6 @@ function Services() {
         value={activeSection}
         onValueChange={setActiveSection}
       >
-        <AccordionItem value="item-1" id="item-1">
-          <AccordionTrigger>Principals and OEMs</AccordionTrigger>
-          <AccordionContent>
-            <Principals/>
-          </AccordionContent>
-        </AccordionItem>
         <AccordionItem value="item-2" id="item-2">
           <AccordionTrigger>Aerospace & Defense</AccordionTrigger>
           <AccordionContent>

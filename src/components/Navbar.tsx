@@ -108,7 +108,7 @@ function Navbar() {
                     onClick={()=>setDropdown(false)}
                     className={({ isActive }) =>
                       cn(
-                        "flex items-center p-2 gap-2 cursor-pointer border-b active:rounded-lg active:bg-secondary hover:border-foreground transition-colors duration-500",
+                        "flex items-center p-2 gap-2 cursor-pointer border-b active:rounded-lg active:bg-secondary hover:border-foreground transition-colors duration-500 hover:text-primary-foreground",
                         isActive
                           ? "lg:border-foreground border-primary"
                           : "border-transparent"
@@ -123,7 +123,7 @@ function Navbar() {
                   <div
                     key={i}
                     onClick={handleClick}
-                    className="flex items-center p-2 gap-2 cursor-pointer border-b active:rounded-lg active:bg-secondary hover:border-foreground transition-colors duration-500 border-transparent"
+                    className="flex items-center p-2 gap-2 cursor-pointer border-b active:rounded-lg active:bg-secondary hover:border-foreground transition-colors duration-500 border-transparent hover:text-primary-foreground"
                   >
                     {nav.title}
                   </div>
@@ -134,7 +134,7 @@ function Navbar() {
                     <DropdownMenuTrigger asChild>
                       <div
                         className={cn(
-                            "flex items-center p-2 gap-2 cursor-pointer border-b active:rounded-lg active:bg-secondary hover:border-foreground transition-colors duration-500",
+                            "flex items-center p-2 gap-2 cursor-pointer border-b active:rounded-lg active:bg-secondary hover:border-foreground transition-colors duration-500 hover:text-primary-foreground",
                             location.pathname === "/services"?"lg:border-foreground border-primary"
                           : "border-transparent"
                           )
