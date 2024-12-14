@@ -2,46 +2,54 @@ import Ceo from "./subcomponents/Ceo";
 
 const teamMembers = [
   {
-    name: "Ravi Kumar Singh",
-    role: "Managing Director, MD",
-    image: "/dummy.png",
-    linkedIn: "/",
-    x: "/",
+    name: "Air Cdre. (R) Pervez Sadiq",
+    role: "Vice President",
+    image: "/Pervez Sadiq.png",
   },
   {
-    name: "Aisha Patel",
-    role: "Operations Head, OH",
-    image: "/dummy.png",
-    linkedIn: "/",
-    x: "/",
+    name: "Ghazi Muqaddas Ali Shah",
+    role: "Director Aerospace & Defense Projects",
+    image: "/Ghazi Muqaddas Ali Shah.png",
   },
   {
-    name: "Mohammed Tariq",
-    role: "Product Manager, PM",
-    image: "/dummy.png",
-    linkedIn: "/",
-    x: "/",
+    name: "Umair Asghar",
+    role: "Director Operations",
+    image: "/Umair Asghar.png",
   },
   {
-    name: "Fatima Noor",
-    role: "Sales Director, SD",
-    image: "/dummy.png",
-    linkedIn: "/",
-    x: "/",
+    name: "Adil Muhammad Shah",
+    role: "Director, Strategies & Marketing",
+    image: "/Adil Muhammad Shah.png",
   },
   {
-    name: "Karan Mehta",
-    role: "Technical Lead, TL",
-    image: "/dummy.png",
-    linkedIn: "/",
-    x: "/",
+    name: "Muhammad Usman Shah",
+    role: "Director Finance",
+    image: "/Muhammad Usman Shah.png",
   },
   {
-    name: "Sofia Ahmed",
-    role: "Marketing Specialist, MS",
-    image: "/dummy.png",
-    linkedIn: "/",
-    x: "/",
+    name: "Noor Abbas Mirza",
+    role: "Deputy Director Aerospace & Defense Projects",
+    image: "/Noor Abbas Mirza.png",
+  },
+  {
+    name: "Ismail Akram",
+    role: "Manager Operations",
+    image: "/Ismail Akram.png",
+  },
+  {
+    name: "Mr. Umair Razzaq",
+    role: "Manager Aerospace & Defense Projects",
+    image: "/Mr. Umair Razzaq.png",
+  },
+  {
+    name: "Muhammad Reyan Awan",
+    role: "Manager Technical",
+    image: "/Muhammad Reyan Awan.png",
+  },
+  {
+    name: "Nasir Aziz",
+    role: "Team Lead Radar Engineer & Field Support Resource (FSR)",
+    image: "/Nasir Aziz.png",
   },
 ];
 
@@ -56,24 +64,10 @@ function Team() {
         {teamMembers.map((member, i) => {
           return (
             <div key={i} className="flex flex-col sm:flex-row bg-secondary border border-borderColor py-6 sm:w-[49.5%] gap-10 px-8 rounded-[32px]">
-              <img src={member.image} className="mx-auto sm:mx-0 w-28 rounded-lg" />
-              <div className="flex flex-col gap-4">
+              <img src={member.image} className="mx-auto sm:mx-0 w-28 grayscale rounded-lg" />
+              <div className="flex flex-col gap-4 justify-center">
                 <h3 className="text-3xl text-white">{member.name}</h3>
-                <span className="text-[#323130]">{member.role}</span>
-                <div className="flex gap-2 mx-auto sm:mx-0">
-                  <a href="/">
-                    <img
-                      src="/linkedin-brands-solid.svg"
-                      className="w-6 h-6 opacity-50"
-                    />
-                  </a>
-                  <a href="/">
-                    <img
-                      src="/x-twitter-brands-solid.svg"
-                      className="w-6 h-6 opacity-50"
-                    />
-                  </a>
-                </div>
+                <span className="text-[#9B9CA1]">{member.role}</span>
               </div>
             </div>
           );
