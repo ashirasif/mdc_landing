@@ -1,1 +1,1 @@
-# MDC Landing Page
+# MDC Landing
