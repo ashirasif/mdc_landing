@@ -6,7 +6,7 @@ function Footer() {
   const navigate = useNavigate();
   const location = useLocation();
   const socialLinks = [
-    { name: "LinkedIn", icon: LinkedIn, url: "https://linkedin.com" },
+    { name: "LinkedIn", icon: LinkedIn, url: "https://www.linkedin.com/company/metallon-delta-corporation-pvt-limited/" },
   ];
   const handleScroll = () => {
     const target = document.getElementById('about-us');

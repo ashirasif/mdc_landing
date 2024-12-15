@@ -9,11 +9,11 @@ function Clients() {
         MDC is proudly serving prestigious Military, Para Military, organizations in Public and Private Sector of Pakistan. It is our utmost obligation to serve them with the best products available in the market.
         </p>
       </div>
-      <div className="flex gap-5 sm:gap-20 mx-auto">
-        <img src="/Client-logo1.png" className="w-10 sm:w-40"/>
-        <img src="/Client-logo2.png" className="w-10 sm:w-40"/>
-        <img src="/Client-logo3.png" className="w-10 sm:w-40"/>
-        <img src="/Client-logo4.png" className="w-10 sm:w-40"/>
+      <div className="flex items-center gap-5 sm:gap-[88px] mx-auto">
+        <img src="/image 3.svg" className="h-[50px] sm:h-[90px] w-auto" />
+        <img src="/image 4.svg" className="h-[50px] sm:h-[90px] w-auto" />
+        <img src="/image 5.svg" className="h-[50px] sm:h-[90px] w-auto" />
+        <img src="/image 6.svg" className="h-[50px] sm:h-[90px] w-auto" />
       </div>
     </div>
   )

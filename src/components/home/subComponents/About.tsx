@@ -160,7 +160,7 @@ function About() {
                 <h2 className="text-3xl font-medium">Cybersecurity Services</h2>
                 <p className="text-foreground">
                   Metallon Delta Corporation, in partnership with{" "}
-                  <a className="text-white underline italic cursor-pointer">
+                  <a className="text-white underline italic cursor-pointer" href="https://www.bugslife.com/" target="_blank" rel="noreferrer">
                     BugsLife
                   </a>
                   , offers tailored cybersecurity solutions to protect
