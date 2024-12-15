@@ -101,7 +101,7 @@ function ContactForm() {
                   </FormItem>
                 )}
               />
-              <div className="flex flex-row sm:flex-row">
+              <div className="flex flex-row gap-2 sm:flex-row">
                 <FormField
                   control={form.control}
                   name="countryCode"
@@ -109,7 +109,7 @@ function ContactForm() {
                     <FormItem>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
-                          <SelectTrigger className="sm:w-[100px] bg-[#1D1D1D] border-borderColor text-white">
+                          <SelectTrigger className=" bg-[#1D1D1D] h-[3.1rem] border-borderColor text-white">
                             <SelectValue placeholder="Code" />
                           </SelectTrigger>
                         </FormControl>

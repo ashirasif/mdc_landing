@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 function Contact() {
   return (
     <div className="w-full max-w-screen-xl bg-secondary font-inter flex flex-col-reverse sm:flex-row py-6 sm:px-10 gap-2 border border-borderColor text-lg rounded-3xl text-white">
-      <div className="pt-16 sm:pl-6 px-4 flex flex-col gap-12 sm:w-1/2">
+      <div className="pt-16 hidden sm:pl-6 px-4 sm:flex flex-col gap-12 sm:w-1/2">
         <div className="flex flex-col gap-4">
           <h2 className="text-4xl font-medium">Contact Us</h2>
           <p className="text-foreground">

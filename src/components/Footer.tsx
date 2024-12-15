@@ -70,7 +70,7 @@ function Footer() {
                   to='/services'
                   className="flex w-16 cursor-pointer border-b border-transparent hover:border-primary transition-colors duration-300 hover:text-primary-foreground"
                 >
-                  Service
+                  Services
                 </NavLink>
               </li>
               <li>
