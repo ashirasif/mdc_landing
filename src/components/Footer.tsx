@@ -37,8 +37,9 @@ function Footer() {
   return (
     <div className="bg-[#0F0F0F] px-8 sm:px-28 font-inter w-full mt-24">
       <div className="flex flex-col gap-11 py-12 ">
-        <div className="flex flex-col sm:flex-row gap-8">
-          <div className="flex flex-col gap-8 sm:w-2/5">
+        <div className="flex flex-col sm:flex-row gap-8 sm:justify-between">
+
+          <div className="flex flex-col max-w-[496px] gap-8">
             <img src="/Logo.png" className="w-24" />
             <div className="flex flex-col gap-6">
               <p>
@@ -62,7 +63,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-8 sm:w-1/5">
+          <div className="flex flex-col gap-8">
             <h4 className="text-xl font-medium text-white">Company</h4>
             <ul className="flex flex-col gap-6">
               <li>
@@ -92,13 +93,14 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="flex flex-col gap-8 sm:w-1/5">
+          <div className="flex flex-col gap-8">
             <h4 className="text-xl font-medium text-white">Sister Companies</h4>
             <ul className="flex flex-col gap-6">
               <li>
                 <a
                   target="_blank"
                   className="flex gap-2 cursor-pointer border-b border-transparent hover:border-primary transition-colors duration-300 hover:text-primary-foreground"
+                  href="https://bugslife.co/"
                 >
                   <span>BugsLife</span>
                   <img src="/arrow-up-right-from-square-solid.svg" className="w-4" />
@@ -108,6 +110,7 @@ function Footer() {
                 <a
                   target="_blank"
                   className="flex gap-2 cursor-pointer border-b border-transparent hover:border-primary transition-colors duration-300 hover:text-primary-foreground"
+                  href="https://abdullahorganicfarms.com/"
                 >
                   <span>Abdullah Organic Farms</span>
                   <img src="/arrow-up-right-from-square-solid.svg" className="w-4" />
