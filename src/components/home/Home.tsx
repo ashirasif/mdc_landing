@@ -47,7 +47,7 @@ function Home() {
               </NavLink>
             </div>
           </div>
-          <img src="/3087.jpg" className="sm:w-2/5 rounded-lg"/>
+          <img src="/helicopters.jpg" className="sm:w-2/5 rounded-lg"/>
         </div>
         </div>
         <Contact/>
