@@ -1,3 +1,4 @@
+import { Card, CardContent } from "@/components/ui/card";
 
 const points = [
   "Business consultancy, local region marketing, on-site presentations",
@@ -10,17 +11,20 @@ const points = [
 ];
 function Principals() {
   return (
-    <div className="flex flex-col gap-6 font-inter">
-      <div className="w-full h-0.5 bg-gradient-to-r from-white to-black rounded-full mt-10"></div>
-      <div className="flex flex-col gap-3">
-        {points.map((point, i) => {
-          return <div key={i} className="flex gap-2">
-            <img src="/circle-check-regular.svg" className="w-5" />
-            <span className="text-lg text-white">{point}</span>
-          </div>;
-        })}
-      </div>
-    </div>
+    <Card>
+      <CardContent className="border border-borderColor rounded-xl p-8">
+        <div className="flex flex-col gap-6 font-inter">
+          <div className="flex flex-col gap-3">
+            {points.map((point, i) => {
+              return <div key={i} className="flex gap-2">
+                <img src="/circle-check-regular.svg" className="w-5" />
+                <span className="text-lg text-white">{point}</span>
+              </div>;
+            })}
+          </div>
+        </div>
+      </CardContent>
+    </Card>
   );
 }
 

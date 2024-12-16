@@ -4,9 +4,9 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 function Footer() {
   const navigate = useNavigate();
-    const location = useLocation();
+  const location = useLocation();
   const socialLinks = [
-    { name: "LinkedIn", icon: LinkedIn, url: "https://linkedin.com" },
+    { name: "LinkedIn", icon: LinkedIn, url: "https://www.linkedin.com/company/metallon-delta-corporation-pvt-limited/" },
   ];
   const handleScroll = () => {
     const target = document.getElementById('about-us');
@@ -22,7 +22,6 @@ function Footer() {
     }
   };
   const handleClick = () => {
-
     if (location.pathname === '/') {
       // Already on the home page, scroll with offset
       handleScroll();
@@ -34,11 +33,13 @@ function Footer() {
       }, 100); // Allow navigation to complete
     }
   };
+
   return (
     <div className="bg-[#0F0F0F] px-8 sm:px-28 font-inter w-full mt-24">
       <div className="flex flex-col gap-11 py-12 ">
-        <div className="flex flex-col sm:flex-row gap-8">
-          <div className="flex flex-col gap-8 sm:w-2/5">
+        <div className="flex flex-col sm:flex-row gap-8 sm:justify-between">
+
+          <div className="flex flex-col max-w-[496px] gap-8">
             <img src="/Logo.png" className="w-24" />
             <div className="flex flex-col gap-6">
               <p>
@@ -62,40 +63,57 @@ function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-8 sm:w-1/5">
+          <div className="flex flex-col gap-8">
             <h4 className="text-xl font-medium text-white">Company</h4>
             <ul className="flex flex-col gap-6">
               <li>
-                <NavLink to='/services' className="flex w-16 cursor-pointer hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
-                  Service
+                <NavLink
+                  to='/services'
+                  className="flex w-16 cursor-pointer border-b border-transparent hover:border-primary transition-colors duration-300 hover:text-primary-foreground"
+                >
+                  Services
                 </NavLink>
               </li>
               <li>
-                <NavLink to={'/our-team'} className="flex w-20 cursor-pointer hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
+                <NavLink
+                  to={'/our-team'}
+                  className="flex w-20 cursor-pointer border-b border-transparent hover:border-primary transition-colors duration-300 hover:text-primary-foreground"
+                >
                   Our Team
                 </NavLink>
               </li>
               <li>
-                <div onClick={handleClick} className="flex w-20 cursor-pointer hover:border-b active:border-b active:rounded-lg active:bg-secondary border-foreground items-center ">
+                <div
+                  onClick={handleClick}
+                  className="flex w-20 cursor-pointer border-b border-transparent hover:border-primary transition-colors duration-300 hover:text-primary-foreground"
+                >
                   About us
                 </div>
               </li>
             </ul>
           </div>
 
-          <div className="flex flex-col gap-8 sm:w-1/5">
+          <div className="flex flex-col gap-8">
             <h4 className="text-xl font-medium text-white">Sister Companies</h4>
             <ul className="flex flex-col gap-6">
-            <li>
-                <a target="_blank" className="flex gap-2 cursor-pointer">
-                <span>BugsLife</span>
-                <img src="/arrow-up-right-from-square-solid.svg" className="w-4"/>
+              <li>
+                <a
+                  target="_blank"
+                  className="flex gap-2 cursor-pointer border-b border-transparent hover:border-primary transition-colors duration-300 hover:text-primary-foreground"
+                  href="https://bugslife.co/"
+                >
+                  <span>BugsLife</span>
+                  <img src="/arrow-up-right-from-square-solid.svg" className="w-4" />
                 </a>
               </li>
-            <li>
-                <a target="_blank" className="flex gap-2 cursor-pointer">
-                <span>Abdullah Organic Farms</span>
-                <img src="/arrow-up-right-from-square-solid.svg" className="w-4"/>
+              <li>
+                <a
+                  target="_blank"
+                  className="flex gap-2 cursor-pointer border-b border-transparent hover:border-primary transition-colors duration-300 hover:text-primary-foreground"
+                  href="https://abdullahorganicfarms.com/"
+                >
+                  <span>Abdullah Organic Farms</span>
+                  <img src="/arrow-up-right-from-square-solid.svg" className="w-4" />
                 </a>
               </li>
             </ul>
@@ -105,7 +123,7 @@ function Footer() {
             <h4 className="text-xl font-medium text-white">
               Looking for a solution?
             </h4>
-            <GetInTouchButton shadow={true}/>
+            <GetInTouchButton shadow={true} />
           </div>
         </div>
 
