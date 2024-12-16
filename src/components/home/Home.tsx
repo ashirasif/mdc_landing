@@ -41,6 +41,7 @@ function Home() {
         <Contact/>
       </div>
     </div>
+    </div>
   );
 }
 
