@@ -35,6 +35,7 @@ function Home() {
                   <span>Explore our Services</span>
                 </NavLink>
               </div>
+            </div>
           <img src="/helicopters.jpg" className="sm:w-2/5 rounded-lg"/>
         </div>
         <Contact/>
