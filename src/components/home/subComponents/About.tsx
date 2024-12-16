@@ -58,7 +58,7 @@ function About() {
 
             <div className="w-full bg-secondary shadow-inner rounded-3xl border border-accent">
               <div className="p-4 sm:p-8 flex flex-col gap-4">
-                <h2 className="text-3xl font-medium">Why Choose Use?</h2>
+                <h2 className="text-3xl font-medium">Why Choose Us?</h2>
                 <p className="text-foreground">
                   Metallon Delta Corporation (MDC) is a trusted leader in
                   aerospace and defense, bridging international technology firms
@@ -69,10 +69,10 @@ function About() {
                   and credibility with global OEMs.
                 </p>
               </div>
-              <div className="flex px-8 gap-8">
-                <div className="bg-[url('/0382.jpg')] bg-cover bg-center h-80 w-1/2 rounded-lg"></div>
+              <div className="flex flex-col sm:flex-row px-8 gap-8">
+                <div className="bg-[url('/pakistan-air-force.jpg')] bg-cover bg-center h-80 sm:w-1/2 rounded-lg"></div>
                 {/* <img src="/0382.jpg" className="w-1/2 rounded-lg" alt="" /> */}
-                <div className="bg-[url('/0383.jpg')] bg-cover bg-center h-80 w-1/2 rounded-lg"></div>
+                <div className="bg-[url('/0383.jpg')] bg-cover bg-center h-80 sm:w-1/2 rounded-lg"></div>
                 {/* <img src="/0383.jpg" className="w-1/2 rounded-lg" alt="" /> */}
               </div>
             </div>

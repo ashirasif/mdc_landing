@@ -51,6 +51,11 @@ const teamMembers = [
     role: "Team Lead Radar Engineer & Field Support Resource (FSR)",
     image: "/Nasir Aziz.png",
   },
+  {
+    name: "Col. (R) Raza Iftikhar",
+    role: "Director Land Warfare",
+    image: "/WhatsApp Image 2024-12-16 at 18.42.01_acb7e4f2.jpg",
+  },
 ];
 
 function Team() {
