@@ -2,7 +2,6 @@ import Clients from "./subComponents/Clients";
 import HeroSection from "./subComponents/HeroSection";
 import Certifications from "./subComponents/Certifications";
 import About from "./subComponents/About";
-// import Testimonial from "./subComponents/Testimonials";
 import Contact from "./subComponents/Contact";
 import { NavLink } from "react-router-dom";
 import ConsultationCall from "./subComponents/ConsultationCall";
@@ -36,7 +35,7 @@ function Home() {
                 </NavLink>
               </div>
             </div>
-          <img src="/helicopters.jpg" className="sm:w-2/5 rounded-lg"/>
+          <img src="/Helicopter.svg" className="sm:w-2/5 rounded-lg"/>
         </div>
         <Contact/>
       </div>

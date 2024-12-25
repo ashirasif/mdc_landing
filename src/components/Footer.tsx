@@ -40,7 +40,7 @@ function Footer() {
         <div className="flex flex-col sm:flex-row gap-8 sm:justify-between">
 
           <div className="flex flex-col max-w-[496px] gap-8">
-            <img src="/Logo.png" className="w-24" />
+          <img src="/Logo.svg" className="w-[135px] h-[59px]" alt="Logo" />
             <div className="flex flex-col gap-6">
               <p>
                 Truth, piety and diligence remain a hallmark in setting
