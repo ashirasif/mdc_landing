@@ -52,9 +52,14 @@ const teamMembers = [
     image: "/Nasir Aziz.png",
   },
   {
-    name: "Col. (R) Raza Iftikhar",
-    role: "Director Land Warfare",
-    image: "/WhatsApp Image 2024-12-16 at 18.42.01_acb7e4f2.jpg",
+    name: "Nisar Ahmad",
+    role: "Member FSR Team",
+    image: "/Nisar Ahmad.png",
+  },
+  {
+    name: "Muhammad Buta Tahir",
+    role: "Member FSR Team",
+    image: "/Muhammad Buta Tahir.png",
   },
 ];
 
@@ -70,7 +75,7 @@ function Team() {
           return (
             <div key={i} className="flex flex-col sm:flex-row bg-secondary border border-borderColor py-6 sm:w-[49.5%] gap-10 px-8 rounded-[32px]">
               <img src={member.image} className="mx-auto sm:mx-0 w-28 grayscale rounded-lg" />
-              <div className="flex flex-col gap-4 justify-center">
+              <div className="flex flex-col gap-4 justify-end">
                 <h3 className="text-3xl text-white">{member.name}</h3>
                 <span className="text-[#9B9CA1]">{member.role}</span>
               </div>

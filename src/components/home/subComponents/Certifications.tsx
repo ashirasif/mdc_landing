@@ -23,16 +23,16 @@ const certifications =[
     text: 'ISO/IEC27001:2022 Certified',
     date: '20.09.2012'
   },
-  // {
-  //   image: '/3087.png',
-  //   text: 'ISO/IEC27001:2022 Certified',
-  //   date: '20.09.2012'
-  // },
-  // {
-  //   image: '/3088.png',
-  //   text: 'ISO/IEC27001:2022 Certified',
-  //   date: '20.09.2012'
-  // },
+  {
+    image: '/PPRA.svg',
+    text: 'Public Procurement Regulatory Authority (PRA)',
+    date: 'PPRA 2015'
+  },
+  {
+    image: '/PSEB.svg',
+    text: 'Pakistan Software Export Board',
+    date: 'PSEB 2024'
+  },
   // {
   //   image: '/3089.png',
   //   text: 'ISO/IEC27001:2022 Certified',

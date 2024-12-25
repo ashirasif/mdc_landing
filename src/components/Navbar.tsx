@@ -86,7 +86,7 @@ function Navbar() {
       <div className={`fixed lg:left-1/2 lg:-translate-x-1/2 z-50 flex flex-col sm:flex-row items-center justify-between lg:w-full w-screen max-w-screen-xl px-8 py-4 bg-secondary border border-borderColor rounded-lg text-lg top-0 left-0 lg:top-10`}>
         <div className="flex w-full justify-between lg:w-auto">
           <NavLink to={"/"}>
-            <img src="/Logo.png" className="w-[5.773rem]" alt="Logo" />
+            <img src="/Logo.svg" className="w-[135px] h-[59px]" alt="Logo" />
           </NavLink>
           <img
             src={dropdown ? "/xmark-solid.svg" : "/bars-solid.svg"}
