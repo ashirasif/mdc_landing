@@ -60,7 +60,8 @@ export default {
   		animation: {
   			circulate: 'circulate 4s linear infinite',
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+				"loop-scroll": "loop-scroll 5s linear infinite"
   		},
   		keyframes: {
   			circulate: {
@@ -95,7 +96,11 @@ export default {
   				to: {
   					height: '0'
   				}
-  			}
+  			},
+				"loop-scroll":{
+					from: {transform: "translateX(0)"},
+					to: {transform: "translateX(-150%)"}
+				}
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
