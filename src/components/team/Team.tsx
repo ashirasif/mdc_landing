@@ -57,7 +57,7 @@ const teamMembers = [
     image: "/Nisar Ahmad.png",
   },
   {
-    name: "Muhammad Buta Tahir",
+    name: "Muhammad Boota Tahir",
     role: "Member FSR Team",
     image: "/Muhammad Buta Tahir.png",
   },
